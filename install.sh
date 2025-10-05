@@ -10,7 +10,10 @@ install_pkgs() {
     tmux \
     dnsutils \
     mandoc \
-    tree
+    tree \
+    file \
+    fzf \
+    perl-rename
 }
 
 change_shell_zsh() {
@@ -27,7 +30,7 @@ bootstrap_zsh() {
 
 configure_home() {
   echo '[info] - Install ~/.config'
-  ln -s "$(pwd)/config" "$HOME/.config"
+  ln -s -f "$(pwd)/config" "$HOME/.config"
 
 }
 
