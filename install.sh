@@ -13,7 +13,8 @@ install_pkgs() {
     tree \
     file \
     fzf \
-    perl-rename
+    perl-rename \
+    make
 }
 
 change_shell_zsh() {
