@@ -1,1 +1,3 @@
 config/vim/.net*
+# I don't care much about GitHub CLI configuration. The file hosts.yaml DOES CONTAIN credentials in plaintext.
+config/gh/*
