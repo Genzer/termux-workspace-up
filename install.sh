@@ -14,7 +14,13 @@ install_pkgs() {
     file \
     fzf \
     perl-rename \
-    make
+    make \
+    openssl-tool \
+    nodejs \
+    nmap \
+    # Needs to use Termux supportfs for Clipboard
+    termux-api \
+    ripgrep
 }
 
 change_shell_zsh() {
@@ -31,7 +37,7 @@ bootstrap_zsh() {
 
 configure_home() {
   echo '[info] - Install ~/.config'
-  ln -s -f "$(pwd)/config" "$HOME/.config"
+  ln -s -f "$(pwd)/config/" "$HOME/.config"
 
 }
 
@@ -44,4 +50,3 @@ main() {
 }
 
 main "$@"
-
