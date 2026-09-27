@@ -58,6 +58,7 @@ start_ssh_agent() {
   if [[ ! -v SSH_AUTH_SOCK ]]; then
     eval "$(ssh-agent -s)"
   fi
+  find ~/.ssh/*.pem -print0 | xargs -0 ssh-add
 }
 
 install_asdf() {
